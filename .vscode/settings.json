@@ -1,0 +1,6 @@
+{
+    "eslint.runtime": "",
+
+
+    "eslint.semi": "always"
+}
