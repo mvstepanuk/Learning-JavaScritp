@@ -1,0 +1,7 @@
+p {
+    border: 1px solid #000;
+    min-height: 10vh;
+    text-align: center;
+    text-decoration-line: underline;
+    font-size: x-large;
+}
