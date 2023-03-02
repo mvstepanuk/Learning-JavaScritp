@@ -120,7 +120,7 @@ consL(arr1, arr)
 const luise = new Person(arr1[4].name)
 arr1.push(luise)
 // ???? не работает
-d = arr1.find(p => p.id === this.id, luise)
+d = arr1.find(p => p.id === this.id, jay)
 consL(d, arr1)
 
 d = arr1.some(x => x.id === 5) ? 'Да' : 'Нет'
