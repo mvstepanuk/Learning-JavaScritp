@@ -24,12 +24,34 @@ for (const v of Object.values(o)) {
 }
 cL(sum)
 let pairs = ''
-for (let [k, v] of Object.entries(o)) {
+for (const [k, v] of Object.entries(o)) {
   pairs += k + v
 }
 cL(pairs)
 
 cL(freq('mississippi'))
+
+const text = 'Na na na na na na na na Batman!'
+const wordSet = new Set(text.split(' '))
+const unique = []
+for (const word of wordSet) {
+  unique.push(word)
+}
+cL(unique)
+
+const m = new Map([[1, 'one'], [2, 'two'], [3, 'three'], [4, 'four']])
+for (const [key, value] of m) {
+  cL(key)
+  cL(value)
+}
+
+// eslint-disable-next-line one-var, prefer-const
+let a = [], i = 0
+for (a[i++] in o) /* пустое тело */;
+// eslint-disable-next-line prefer-const
+for (let i in a) cL(i)
+
+cL(factorial(4))
 
 function freq (str) {
   const frequency = {}
@@ -44,3 +66,10 @@ function freq (str) {
 }
 
 function cL (x) { console.log(x) }
+
+function factorial (x) {
+  if (x < 0) throw new Error('Значение x не должно быть отрицательным')
+  let f
+  for (f = 1; x > 1; f *= x, x--) /* пустое тело */ ;
+  return f
+}
